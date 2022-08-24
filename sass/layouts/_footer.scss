@@ -17,6 +17,10 @@
   line-height: 1.19;
   letter-spacing: 0.03em;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 .logo-footer span {
   font-family: "Raleway";
@@ -27,18 +31,16 @@
   letter-spacing: 0.03em;
   color: var(--accent-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
-.logo-footer:hover,
-.logo-footer:focus {
-  color: var(--accent-color);
-}
-.logo-footer span:hover,
-.logo-footer span:focus {
-  color: var(--accent-color);
-}
+
 .footer-contacts list link {
   display: block;
 }
+
 .adress {
   font-style: normal;
 }
@@ -63,14 +65,17 @@
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
-.footer-info:not(:last-child) {
-  margin-bottom: 9px;
+.footer-info {
+  &:not(:last-child) {
+    margin-bottom: 9px;
+  }
 }
-.footer-contacts :hover,
-.footer-contacts :focus {
-  color: var(--accent-color);
-}
+
 .footer-soc-title {
   font-weight: 700;
   font-size: 14px;
@@ -105,19 +110,20 @@
   height: 44px;
   background-color: rgba(255, 255, 255, 0.1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: var(--primary-bg-color);
+  }
 }
 .footer-soc-icon {
   fill: var(--background-color);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  .footer-soc-link:hover &,
+  .footer-soc-link:focus & {
+    fill: var(--background-color);
+  }
 }
-.footer-soc-link:hover,
-.footer-soc-link:focus {
-  background-color: var(--primary-bg-color);
-}
-.footer-soc-link:hover .footer-soc-icon,
-.footer-soc-link:focus .footer-soc-icon {
-  fill: var(--background-color);
-}
+
 .footer-thumb {
   width: 570px;
   margin-left: 93px;
@@ -160,19 +166,20 @@
   padding-left: 16px;
   outline: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus {
+    border-color: var(--accent-color);
+  }
+  &::placeholder {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    background-color: transparent;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+  }
 }
-.footer-input:focus {
-  border-color: var(--accent-color);
-}
-.footer-input::placeholder {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  background-color: transparent;
-  line-height: 1.25;
-  letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
-}
+
 .footer-btn {
   position: relative;
   display: flex;
@@ -195,8 +202,8 @@
   color: #ffffff;
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.footer-btn:focus,
-.footer-btn:hover {
-  background-color: #188ce8;
+  &:focus,
+  &:hover {
+    background-color: #188ce8;
+  }
 }

@@ -22,17 +22,17 @@
   align-items: center;
   justify-content: center;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    border-color: #2196f3;
+  }
 }
 .clients-list-item-icon {
   fill: #afb1b8;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.clients-list-item-link:hover,
-.clients-list-item-link:focus {
-  border-color: #2196f3;
-}
-.clients-list-item-link:hover .clients-list-item-icon,
-.clients-list-item-link:focus .clients-list-item-icon {
-  border-color: #2196f3;
-  fill: #2196f3;
+  .clients-list-item-link:hover &,
+  .clients-list-item-link:focus & {
+    border-color: #2196f3;
+    fill: #2196f3;
+  }
 }
